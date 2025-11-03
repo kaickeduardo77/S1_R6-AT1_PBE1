@@ -1,0 +1,225 @@
+type: collection.insomnia.rest/5.0
+name: loja spricio
+meta:
+  id: wrk_87685b2d01e741c79f79180f300d064a
+  created: 1760983657476
+  modified: 1760983684787
+  description: ""
+collection:
+  - name: produtos
+    meta:
+      id: fld_6a26c40e492e44238a72e9fc59bc30a7
+      created: 1761564530827
+      modified: 1761590473213
+      sortKey: -1761564530827
+      description: ""
+    children:
+      - url: localhost:8081/produtos/7
+        name: Delete
+        meta:
+          id: req_1d3c2c6619c045c6984a52189bc2fb74
+          created: 1760983664546
+          modified: 1761590483367
+          isPrivate: false
+          description: ""
+          sortKey: -1761590470207
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/5
+        name: Select por ID
+        meta:
+          id: req_6c1afda5bd83444992db7a94b380f3d0
+          created: 1761564490836
+          modified: 1761590481331
+          isPrivate: false
+          description: ""
+          sortKey: -1761590470107
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Select todos
+        meta:
+          id: req_9c50b57a34264008aef9cb56fd66c49a
+          created: 1761564493415
+          modified: 1761590479092
+          isPrivate: false
+          description: ""
+          sortKey: -1761590470007
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao" : "tomate",
+            	"valor" : 7.88
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Novo registro
+        meta:
+          id: req_7d38676d478d452198c49284add048f2
+          created: 1761564544370
+          modified: 1761590477245
+          isPrivate: false
+          description: ""
+          sortKey: -1761590469907
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao" : "mouse",
+            	"valor" : 100.99
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/3
+        name: alterar
+        meta:
+          id: req_f76ab22071784064a91ff0658dc468bf
+          created: 1761570272581
+          modified: 1761590469854
+          isPrivate: false
+          description: ""
+          sortKey: -1761590469807
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao" :  " kaick ",
+            	"valor" : 7.90
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_794b7654e0d54dbbaa777891977743a2
+      created: 1761583582066
+      modified: 1761583594001
+      sortKey: -1761583582066
+      description: ""
+    children:
+      - url: localhost:8081/cliente
+        name: criar clientes
+        meta:
+          id: req_8a4decb1cd774d01bce6ffa92f1f6e1e
+          created: 1761583672302
+          modified: 1762168564925
+          isPrivate: false
+          description: ""
+          sortKey: -1761583677998
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome_cliente" : " kaick",
+            	"cpf" : 49213812833
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/cliente
+        name: listar cliente
+        meta:
+          id: req_6d87bbcf7adc41499ebffd6cfe8e0f39
+          created: 1762167994498
+          modified: 1762168668208
+          isPrivate: false
+          description: ""
+          sortKey: -1761583678098
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_cdf6db9d738844540a936170a5dacb5b20f841ef
+    created: 1760983657509
+    modified: 1760983657509
+environments:
+  name: Base Environment
+  meta:
+    id: env_cdf6db9d738844540a936170a5dacb5b20f841ef
+    created: 1760983657489
+    modified: 1760983657489
+    isPrivate: false
