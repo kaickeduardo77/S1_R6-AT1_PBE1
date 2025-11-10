@@ -19,7 +19,7 @@ const clienteModel = {
  
   buscarCpf: async (cpf) => {
     const sql = 'SELECT * FROM clientes WHERE cpf = ?;';
-    const [rows] = await pool.query(sql, [cpf]);
+    const [rows] = await pool.query(sql, cpf);
     return rows;
   },
 

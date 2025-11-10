@@ -164,7 +164,7 @@ collection:
         meta:
           id: req_8a4decb1cd774d01bce6ffa92f1f6e1e
           created: 1761583672302
-          modified: 1762195630447
+          modified: 1762773789012
           isPrivate: false
           description: ""
           sortKey: -1761583677998
@@ -173,8 +173,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"nome_cliente" : " maria",
-            	"cpf" : 485940234
+            	"nome_cliente" : " gabi",
+            	"cpf" : 485940543
             }
         headers:
           - name: Content-Type
@@ -189,12 +189,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8081/cliente
+      - url: localhost:8081/cliente/
         name: listar cliente
         meta:
           id: req_6d87bbcf7adc41499ebffd6cfe8e0f39
           created: 1762167994498
-          modified: 1762196562008
+          modified: 1762773970017
           isPrivate: false
           description: ""
           sortKey: -1761583678098
@@ -210,12 +210,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8081/cliente/6
+      - url: localhost:8081/cliente/8
         name: delete
         meta:
           id: req_837c403fb3e648d0b0ecc432d031b1c5
           created: 1762195334199
-          modified: 1762197108303
+          modified: 1762774133485
           isPrivate: false
           description: ""
           sortKey: -1761583678198
@@ -231,12 +231,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8081/cliente/6
+      - url: localhost:8081/cliente/7
         name: alterar
         meta:
           id: req_2b289eb8370947f8b33691625aa267de
           created: 1762196904994
-          modified: 1762197096388
+          modified: 1762773665852
           isPrivate: false
           description: ""
           sortKey: -1761583678298
@@ -246,12 +246,39 @@ collection:
           text: |-
             {
             	"id_cliente" : "",
-            	"nome_cliente" : " maria2",
+            	"nome_cliente" : " maria eduarda 2",
             	"cpf" : 485940547
             }
         headers:
           - name: Content-Type
             value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/cliente/id
+        name: BuscarporID
+        meta:
+          id: req_d382f68665064dd18785ec1df9f899de
+          created: 1762773958517
+          modified: 1762774119354
+          isPrivate: false
+          description: ""
+          sortKey: -1761583678398
+        method: GET
+        parameters:
+          - id: pair_d05b36a96a484f53a5c82f91e25e4f39
+            name: id
+            value: "8"
+            description: ""
+            disabled: false
+        headers:
           - name: User-Agent
             value: insomnia/11.6.2
         settings:
